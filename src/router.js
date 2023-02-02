@@ -58,7 +58,7 @@ const routes = [
         component: () => import("@/views/CategoryProductDetail")
   },
     {
-      path : '/Galleria',
+      path : '/Gallery',
       name : 'galeria',
       component : Galleria,
     },
@@ -111,8 +111,8 @@ const routes = [
         component: () => import("@/views/CategoryProductDetail")
   },
     {
-      path : '/fr/Galleria',
-      name : 'galeriaes',
+      path : '/fr/Gallery',
+      name : 'galeriafr',
       component : Galleria,
     },
   /*es*/
@@ -163,8 +163,8 @@ const routes = [
         component: () => import("@/views/CategoryProductDetail")
   },
   {
-      path : '/es/Galleria',
-      name : 'galeriafr',
+      path : '/es/Gallery',
+      name : 'galeriaes',
       component : Galleria,
     },
     

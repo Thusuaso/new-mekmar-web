@@ -2,9 +2,8 @@
     <br/>
     <br />
     <div class="columns">
-        <div class="column is-2">
-        </div>
-        <div class="column is-1">
+
+        <div class="column is-3">
             <img class="imageMekmar" src="https://cdn.mekmarimage.com/logo/logo-mekmar.png" alt="Mekmar Logo" />
         </div>
         <div class="column is-9">
@@ -42,7 +41,7 @@
                 
                 
                 </router-link>
-                <router-link to="/galleria">
+                <router-link to="/gallery">
                     <el-menu-item index="7">{{ navData.galleria }}</el-menu-item>
                 
                 
@@ -54,7 +53,7 @@
                         </a>
                     
                     </el-menu-item>
-                <router-link :to="'/'" style="margin-left:90px;">
+                <router-link :to="'/'">
                     <el-menu-item index="1">
                         <img src="https://cdn.mekmarimage.com/logo/eng-logo.png" />
                     </el-menu-item>
@@ -105,7 +104,7 @@
                 <router-link to="/fr/videos">
                     <el-menu-item index="6">{{ navData.videos }}</el-menu-item>
                 </router-link>
-                <router-link to="/fr/galleria">
+                <router-link to="/fr/gallery">
                     <el-menu-item index="7">{{ navData.galleria }}</el-menu-item>
                 </router-link>
                 <el-menu-item index="8">
@@ -115,7 +114,7 @@
                     </a>
 
                 </el-menu-item>
-                <router-link :to="'/'" style="margin-left:90px;">
+                <router-link :to="'/'">
                     <el-menu-item index="1">
                         <img src="https://cdn.mekmarimage.com/logo/eng-logo.png" />
                     </el-menu-item>
@@ -164,7 +163,7 @@
                 <router-link to="/es/videos">
                     <el-menu-item index="6">{{ navData.videos }}</el-menu-item>
                 </router-link>
-                <router-link to="/es/galleria">
+                <router-link to="/es/gallery">
                     <el-menu-item index="7">{{ navData.galleria }}</el-menu-item>
                 </router-link>
                 <el-menu-item index="8">
@@ -172,7 +171,7 @@
                         {{ navData.catalog }}
                     </a>
                 </el-menu-item>
-                <router-link :to="'/'" style="margin-left:90px;">
+                <router-link :to="'/'" >
                     <el-menu-item index="1">
                         <img src="https://cdn.mekmarimage.com/logo/eng-logo.png" />
                     </el-menu-item>
@@ -226,7 +225,8 @@ export default {
 
 <style scoped>
 .imageMekmar{
-    width:120px;
-    height:50px;
+    width:290px;
+    height:80px;
+    margin-top:-12px;
 }
 </style>

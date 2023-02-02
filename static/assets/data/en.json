@@ -8,7 +8,7 @@
     "fabrication":"Fabrication",
     "videos":"Videos",
     "catalog" : "Catalog",
-    "galleria":"Galleria"
+    "galleria":"Gallery"
   },
   "link" : {
 
@@ -18,7 +18,7 @@
      "fabrication":"/Fabrication",
      "videos":"/Videos",
      "usaproduct" : "/USAstocks",
-     "galleria":"/Galleria"
+     "galleria":"/Gallery"
   },
   "usa_link" : {
 
