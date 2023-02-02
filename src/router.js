@@ -8,14 +8,18 @@ const routes = [
     {
         path: '/',
     component: () => import("@/views/Home"),
-    beforeEnter: (to,from,next) => {
+    beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
             service.getCategoryList().then(data => {
               store.dispatch("category_load_act", data)
               })
               service.getSlideList().then(data => {
-                  store.dispatch("slides_load_act", data)
+                store.dispatch("slides_load_act", data)
+                store.dispatch('fullScreenLoadingAct',false)
+                
               })
-            store.dispatch("usa_module_load_act",false)
+            store.dispatch("usa_module_load_act", false)
+      
       
             next()
       
@@ -62,12 +66,16 @@ const routes = [
     {
         path: '/fr',
       component: () => import("@/views/Home"),
-        beforeEnter: (to,from,next) => {
+      beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+          
           service.getCategoryList().then(data => {
             store.dispatch("category_load_act",data)
         })
         service.getSlideList().then(data => {
-            store.dispatch("slides_load_act", data)
+          store.dispatch("slides_load_act", data)
+            store.dispatch('fullScreenLoadingAct',false)
+          
         })
             store.dispatch("usa_module_load_act",false)
           next()
@@ -111,12 +119,16 @@ const routes = [
     {
         path: '/es',
       component: () => import("@/views/Home"),
-      beforeEnter: (to,from,next) => {
+      beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+        
           service.getCategoryList().then(data => {
             store.dispatch("category_load_act",data)
         })
         service.getSlideList().then(data => {
-            store.dispatch("slides_load_act", data)
+          store.dispatch("slides_load_act", data)
+            store.dispatch('fullScreenLoadingAct',false)
+          
         })
         store.dispatch("usa_module_load_act",false)
         next()
@@ -163,11 +175,15 @@ const routes = [
     path: '/usa',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+
       serviceUsa.getProductCategoryList().then(data => {
         store.dispatch('usa_product_list_act',data)
       })
       serviceUsa.getUsaProductsMainPage().then(data => {
-        store.dispatch('usa_home_list_act',data)
+        store.dispatch('usa_home_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -177,12 +193,15 @@ const routes = [
     path: '/usa/usaStock/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getUsageOfAreaFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -192,12 +211,15 @@ const routes = [
     path: '/usa/Color/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getColorFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -207,12 +229,15 @@ const routes = [
     path: '/usa/Size/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getSizeFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -222,12 +247,15 @@ const routes = [
     path: '/usa/usaproducts/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getCategoryProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -237,7 +265,11 @@ const routes = [
     path: '/usa/about',
     component: () => import("@/views/usa/About"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+
       store.dispatch('usa_module_load_act', true)
+            store.dispatch('fullScreenLoadingAct',false)
+
       next()
     }
   },
@@ -245,7 +277,11 @@ const routes = [
     path: '/usa/contact',
     component: () => import("@/views/usa/Contact"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+
       store.dispatch('usa_module_load_act', true)
+            store.dispatch('fullScreenLoadingAct',false)
+
       next()
     }
   },
@@ -253,8 +289,12 @@ const routes = [
     path: '/usa/faq',
     component: () => import("@/views/usa/Faq"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+
       serviceUsa.getUsaFaqList().then(data => {
-        store.dispatch('usa_faq_list_act',data)
+        store.dispatch('usa_faq_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -264,8 +304,12 @@ const routes = [
     path: '/usa/detail/:name/:id',
     component: () => import("@/views/usa/ProductDetail"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+      
       serviceUsa.getUsaProductDetailList(to.params.id).then(data => {
-          store.dispatch('usa_product_detail_list_load',data)
+        store.dispatch('usa_product_detail_list_load', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
         
       store.dispatch('usa_module_load_act', true)
@@ -276,12 +320,16 @@ const routes = [
   {
     path: '/fr/usa',
     component: () => import('@/views/usa/Home'),
-     beforeEnter: (to, from, next) => {
+    beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+       
       serviceUsa.getProductCategoryList().then(data => {
         store.dispatch('usa_product_list_act',data)
       })
       serviceUsa.getUsaProductsMainPage().then(data => {
-        store.dispatch('usa_home_list_act',data)
+        store.dispatch('usa_home_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -291,12 +339,15 @@ const routes = [
     path: '/fr/usa/usaStock/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getUsageOfAreaFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -306,12 +357,15 @@ const routes = [
     path: '/fr/usa/Color/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getColorFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -321,12 +375,15 @@ const routes = [
     path: '/fr/usa/Size/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getSizeFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -336,12 +393,15 @@ const routes = [
     path: '/fr/usa/usaproducts/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getCategoryProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -367,8 +427,12 @@ const routes = [
     path: '/fr/usa/faq',
     component: () => import("@/views/usa/Faq"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+
       serviceUsa.getUsaFaqList().then(data => {
-        store.dispatch('usa_faq_list_act',data)
+        store.dispatch('usa_faq_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -378,8 +442,12 @@ const routes = [
     path: '/fr/usa/detail/:name/:id',
     component: () => import("@/views/usa/ProductDetail"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+
       serviceUsa.getUsaProductDetailList(to.params.id).then(data => {
-          store.dispatch('usa_product_detail_list_load',data)
+        store.dispatch('usa_product_detail_list_load', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
         
       store.dispatch('usa_module_load_act', true)
@@ -390,12 +458,16 @@ const routes = [
   {
     path: '/es/usa',
     component: () => import('@/views/usa/Home'),
-     beforeEnter: (to, from, next) => {
+    beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+       
       serviceUsa.getProductCategoryList().then(data => {
         store.dispatch('usa_product_list_act',data)
       })
       serviceUsa.getUsaProductsMainPage().then(data => {
-        store.dispatch('usa_home_list_act',data)
+        store.dispatch('usa_home_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -405,12 +477,15 @@ const routes = [
     path: '/es/usa/usaStock/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getUsageOfAreaFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -420,12 +495,15 @@ const routes = [
     path: '/es/usa/Color/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getColorFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -435,12 +513,15 @@ const routes = [
     path: '/es/usa/Size/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getSizeFilterProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -450,12 +531,15 @@ const routes = [
     path: '/es/usa/usaproducts/:name',
     component: () => import("@/views/usa/Home"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
 
       serviceUsa.getCategoryProduct(to.params.name).then(data => {
         store.dispatch('usa_home_list_act',data)
       })
       serviceUsa.getProductCategoryList().then(data => {
-        store.dispatch('usa_product_list_act',data)
+        store.dispatch('usa_product_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -482,8 +566,12 @@ const routes = [
     path: '/es/usa/faq',
     component: () => import("@/views/usa/Faq"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+
       serviceUsa.getUsaFaqList().then(data => {
-        store.dispatch('usa_faq_list_act',data)
+        store.dispatch('usa_faq_list_act', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
       store.dispatch('usa_module_load_act', true)
       next()
@@ -493,8 +581,12 @@ const routes = [
     path: '/es/usa/detail/:name/:id',
     component: () => import("@/views/usa/ProductDetail"),
     beforeEnter: (to, from, next) => {
+            store.dispatch('fullScreenLoadingAct',true)
+
       serviceUsa.getUsaProductDetailList(to.params.id).then(data => {
-          store.dispatch('usa_product_detail_list_load',data)
+        store.dispatch('usa_product_detail_list_load', data)
+            store.dispatch('fullScreenLoadingAct',false)
+        
       })
         
       store.dispatch('usa_module_load_act', true)

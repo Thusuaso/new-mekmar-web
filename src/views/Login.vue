@@ -25,12 +25,18 @@ export default {
             }
         },
         login() {
+            this.$store.dispatch('fullScreenLoadingAct', true)
+
             service.getLogin(this.username).then(data => {
                 if (data.status) {
                     localStorage.setItem('login_', data.status)
+                    this.$store.dispatch('fullScreenLoadingAct', false)
+
                     this.$toast.add({ severity: 'success', summary: 'Login', detail: 'Login Successful', life: 2500 });
                 } else {
                     this.$toast.add({ severity: 'error', summary: 'Login', detail: 'Login Error, Please Try Again', life: 2500 });
+                    this.$store.dispatch('fullScreenLoadingAct', false)
+
                     localStorage.setItem('login_', data.status)
                 }
             })

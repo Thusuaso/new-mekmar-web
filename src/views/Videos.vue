@@ -40,8 +40,12 @@ import store from "@/store"
 import { mapGetters } from "vuex";
 export default {
     beforeRouteEnter(to, from, next) {
+        store.dispatch('fullScreenLoadingAct', true)
+
         service.getVideosList().then(data => {
-            store.dispatch("videos_load_act",data)
+            store.dispatch("videos_load_act", data)
+            store.dispatch('fullScreenLoadingAct', false)
+
             next()
         })
     },

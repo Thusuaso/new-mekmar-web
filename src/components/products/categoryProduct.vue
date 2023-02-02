@@ -1,13 +1,13 @@
 <template>
     <div class="categoryMain">
         <div class="categoryRestricted">
-            <router-link :to="('/products/' + category.category_link)" v-if="dis_en" target="_blank">
+            <router-link :to="('/products/' + category.category_link)" v-if="dis_en">
                 <img class="categoryImage" :src="category.category_foto_en"  :alt="category.category_foto_en"/>
             </router-link>
-            <router-link :to="('/fr/products/' + category.category_link)" v-else-if="dis_fr" target="_blank">
+            <router-link :to="('/fr/products/' + category.category_link)" v-else-if="dis_fr">
                 <img class="categoryImage"  :src="category.category_foto_fr" :alt="category.category_foto_fr" />
             </router-link>
-            <router-link :to="('/es/products/' + category.category_link)" v-else-if="dis_es" target="_blank">
+            <router-link :to="('/es/products/' + category.category_link)" v-else-if="dis_es">
                 <img class="categoryImage"  :src="category.category_foto_es"  :alt="category.category_foto_es"/>
             </router-link>
         </div>

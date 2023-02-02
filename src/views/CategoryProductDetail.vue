@@ -53,8 +53,11 @@ export default {
         ])
     },
     created() {
+        this.$store.dispatch('fullScreenLoadingAct', true)
         service.getCategoryProductDetail(this.$route.params.productName).then(data => {
             this.$store.dispatch('category_product_detail_load_act', data)
+            this.$store.dispatch('fullScreenLoadingAct', false)
+
         })
     }
 }

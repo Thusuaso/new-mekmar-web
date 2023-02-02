@@ -73,8 +73,11 @@ export default {
         ])
     },
     created() {
+        this.$store.dispatch('fullScreenLoadingAct',true)
         service.getCategoryDetail(this.$route.params.category).then(data => {
             this.$store.dispatch('category_detail_load_act', data)
+            this.$store.dispatch('fullScreenLoadingAct', false)
+
         })        
     },
     methods: {
@@ -82,8 +85,12 @@ export default {
     mounted() {
         this.emitter.on('colorFilterValue', data => {
             if (data == 'All') {
+                this.$store.dispatch('fullScreenLoadingAct', true)
+
                 service.getCategoryDetail(this.$route.params.category).then(data => {
                     this.$store.dispatch('category_detail_load_act', data)
+                    this.$store.dispatch('fullScreenLoadingAct', false)
+
                 })
                 this.isFilter = false
             } else {

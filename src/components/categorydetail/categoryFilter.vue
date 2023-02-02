@@ -140,8 +140,12 @@ export default {
         ])
     },
     created() {
+        this.$store.dispatch('fullScreenLoadingAct', true)
+
         service.getCategoryDetailColor(this.$route.params.category).then(data => {
             this.$store.dispatch('category_detail_color_load_act', data)
+            this.$store.dispatch('fullScreenLoadingAct', false)
+
 
         })
 
@@ -152,9 +156,12 @@ export default {
             this.emitter.emit("colorFilterValue",color)
         },
         filterFinish(finish) {
+            this.$store.dispatch('fullScreenLoadingAct', true)
+
             service.getCategoryProductFinish(this.$route.params.category, finish).then(data => {
-                console.log(data)
                 this.$store.dispatch('category_detail_load_act', data)
+                this.$store.dispatch('fullScreenLoadingAct', false)
+
             })
             this.emitter.emit("finishEmitter", false)
         }

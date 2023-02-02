@@ -50,13 +50,18 @@ export default {
 
         register() {
             if (this.user.name != "" && this.user.username != "" && this.user.email != "" && this.user.phone != "") {
+                this.$store.dispatch('fullScreenLoadingAct', true)
+
                 service.setRegister(this.user).then(data => {
                     if (data.status) {
+                        this.$store.dispatch('fullScreenLoadingAct', false)
 
                         this.$toast.add({ severity: 'success', summary: 'Register', detail: 'Register Successful', life: 2500 });
                         localStorage.setItem('login_', data.status)
                         this.$router.push('/')
                     } else {
+                        this.$store.dispatch('fullScreenLoadingAct', false)
+
                         this.$toast.add({ severity: 'error', summary: 'Register', detail: 'Register Error, Please Try Again', life: 2500 });
                         localStorage.setItem('login_', data.status)
                     }

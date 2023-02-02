@@ -30,8 +30,12 @@ export default {
         categoryFilter
     },
     created() {
+        this.$store.dispatch('fullScreenLoadingAct', true)
+
         service.getCategoryDetailColorList(this.$route.params.category, this.$route.params.color).then(data => {
             this.$store.dispatch("category_detail_color_list_load_act", data)
+            this.$store.dispatch('fullScreenLoadingAct', false)
+
         })
     }
 }

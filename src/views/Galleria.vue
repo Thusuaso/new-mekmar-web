@@ -72,9 +72,12 @@ export default {
         }
     },
     created() {
+        this.$store.dispatch('fullScreenLoadingAct', true)
+
         service.getGalleriaPhotos().then(data => {
-            console.log("getGalleriaPhotos",data)
             this.galleryList = data
+            this.$store.dispatch('fullScreenLoadingAct', false)
+
 
         })
     },

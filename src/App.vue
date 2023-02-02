@@ -1,4 +1,5 @@
 <template>
+  <div v-loading.fullscreen.lock="fullscreenLoading"></div>
   <div style="height: auto; overflow: hidden">
     <div class="main">
       <div class="mainRestricted">
@@ -33,6 +34,7 @@ export default {
   computed: {
     ...mapGetters([
       'usa_module',
+      'fullscreenLoading'
     ])
   },
   components: {

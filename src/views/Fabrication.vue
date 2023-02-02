@@ -227,8 +227,12 @@ export default {
       ])  
     },
     beforeRouteEnter(to, from, next) {
+        store.dispatch('fullScreenLoadingAct', true)
+
         service.getFabricationList().then(data => {
-            store.dispatch("fabrication_load_act",data)
+            store.dispatch("fabrication_load_act", data)
+            store.dispatch('fullScreenLoadingAct', false)
+
         })
         next()
     },
