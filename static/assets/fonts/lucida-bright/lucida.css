@@ -1,0 +1,8 @@
+
+@font-face {
+    font-family: 'Lucida Bright';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Lucida Bright'), url('LBRITEd.woff') format('woff');
+    font-display: swap;
+    }

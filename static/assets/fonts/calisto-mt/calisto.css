@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Calisto MT';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Calisto MT'), url('calisto-mt.woff') format('woff');
+    font-display: swap;
+    }

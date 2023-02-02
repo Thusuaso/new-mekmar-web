@@ -1,0 +1,313 @@
+{
+  "navigation" : {
+
+    "home" : "Accueil",
+    "product" : "Produit",
+    "about" : "A Propos", 
+    "contact" : "Contact",
+    "fabrication":"Fabrication",
+    "videos":"Vidéos",
+    "catalog" : "Catalogue",
+    "galleria":"Galerie"
+  },
+  "link" : {
+
+    "home" : "/fr",
+    "about" : "/fr/About",
+    "contact" : "/fr/Contact",
+    "fabrication":"/fr/Fabrication",
+    "videos":"/fr/Videos",
+    "usaproduct" : "/fr/USAstocks",
+    "galleria":"/fr/Galleria"
+ },
+ "usa_link" : {
+
+   "home" : "/fr/USAstocks",
+   "about" : "/fr/USA/About",
+   "contact" : "/fr/USA/Contact",
+   
+   "faq" : "/fr/USA/FAQ"
+ },
+  "footer" : {
+
+    "about" :{
+
+      "title" : "A Propos De Nous",
+      "description" : "MEKMAR produit et fournit les meilleurs et de haute qualité de produits en pierre naturelle. Nous visons la meilleure qualité, le meilleur service et la plus grande satisfaction client jusqu'à la livraison des produits. Nous vous informons étape par étape du paiement, de la production et des expéditions.",
+      "items"  : [
+
+        {"id" : 1, "value" : "Noud fournissons un service mondial."},
+        { "id"  :2, "value" : "Nous produisons tout type de pierre naturelle en plaque a mosaique" }  ,
+        { "id" : 3, "value" : "Nous controlons 30.000 m2 de produit par mois" },
+        { "id" : 4, "value" :  "Nous fournissons des solutions naturelle par des projets architecturaux." }
+      ]
+    },
+    "news" : {
+      "title" : "Nouveaux",
+      "photos":[
+        {"index":0,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-3-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-3-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-33-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-33-s.jpeg"},
+        {"index":1,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-6-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-6-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-66-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-66-s.jpeg"},
+        {"index":2,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-7-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-7-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-77-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-77-s.jpeg"},
+        {"index":3,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-8-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-8-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-88-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-88-s.jpeg"},
+        {"index":4,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-5-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-5-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-55-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-55-s.jpeg"},
+        {"index":5,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-4-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-4-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-44-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-44-s.jpeg"},
+        {"index":6,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-9-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-9-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-99-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-99-s.jpeg"},
+        {"index":7,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-2-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-2-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-22-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-22-s.jpeg"},
+        {"index":8,"webpB":"https://cdn.mekmarimage.com/news/big/newsBig/news-1-b.webp","webpS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-1-s.webp","jpegB":"https://cdn.mekmarimage.com/news/big/newsBig/news-11-b.jpeg","jpegS":"https://cdn.mekmarimage.com/news/small/newsSmall/news-11-s.jpeg"}
+
+
+
+
+
+
+
+        
+      ]
+    },
+    "salesTeam" : {
+
+      "title" : "L'équipe commerciale de Mekmar",
+      "items" : [
+        {
+          "name" : "Gizem",
+           "job" : "Specialiste en Ventes",
+           "email" : "info@mekmar.com",
+           "whatsapp" : "+90 542 660 8087",
+           "phone" : "+1 860 373 7401",
+           "image" : "https://cdn.mekmarimage.com/personel/250x250/gizem1.jpeg",
+           "webp" : "https://cdn.mekmarimage.com/personel/250x250/gizem1.webp",
+           "id"  : 1,
+           "icon":"fa fa-thin fa-person-dress"
+           
+        },       
+        {
+          "name" : "Ozlem",
+           "job" : "Dessinateur Industriel",
+           "email" : "export1@mekmar.com",
+           "whatsapp" : "+90 542 660 8085",
+           "phone" : "1 860 373 7401",
+           "image" : "https://cdn.mekmarimage.com/personel/250x250/ozlem2.jpeg",
+           "webp" : "https://cdn.mekmarimage.com/personel/250x250/ozlem2.webp",
+           "id" : 3,
+           "icon":"fa fa-thin fa-person-dress"
+        }
+        ,
+        {
+          "name" : "Hakan",
+           "job" : "Specialiste en Ventes",
+           "email" : "export2@mekmar.com",
+           "whatsapp" : "+90 542 660 8084",
+           "phone" : "1 860 373 7401",
+           "image" : "https://cdn.mekmarimage.com/personel/250x250/hakan4.jpeg",
+           "webp" : "https://cdn.mekmarimage.com/personel/250x250/hakan4.webp",
+           "id" : 2,
+           "watsappLink":"https://web.whatsapp.com/send?phone=905426608084",
+           "icon":"fa fa-thin fa-person"
+        }
+       
+      ]
+    }
+  },
+  "search" : "Search",
+  "product_list" : {
+
+    "kategori" : "CATHEGORİES",
+    "color" : "COULEUR",
+    "finish" : "FINITION"
+  },
+  "product_detail" : {
+
+    "description" : "Description",
+    "tab_1" : "Detail",
+    "tab_2" : "Application",
+    "tab_3" : "Taille & Prix",
+    "tab_1_code" : "CODE",
+    "tab_1_stonetype" : "TYPE DE PIERRE",
+    "tab_1_country" : "PAYS D'ORIGINE",
+    "tab_1_varitaion" : "VARIATION",
+    "tab_2_test_report" : "Raport de Test/Spécifications Techniques",
+    "tab_2_available" : "Finition Disponible",
+    "benzerurun_title" : "Vous etes peut etre intéressé par...",
+    "onerilenurun_title" : "Produits Suggérés",
+    "tab_2_specification" : "Spécifications du Produit"
+
+  },
+  "about_page" : {
+    "header" : "A Propos De Nous",
+    "title_1" : "Notre mission",
+    "title_2" : "Notre Vision",
+    "pdfTitle":"Si vous souhaitez consulter le profil de notre entreprise au format PDF, cliquez ici: ",
+    "items_1" : [
+
+       { "id" : 1, "value" : "Utiliser efficacement les ressources naturelles; être une entreprise mondiale respectée, sensible à la société et à l'environnement." },
+       { "id" : 2, "value" : "Pour assurer la satisfaction de tous les clients et traiter chaque client avec dignité." },
+       { "id" : 3, "value" : "Conserver l'image d'un fournisseur / fabricant turc de pierre naturelle de première qualité dans le monde entier." }
+    ],
+    "items_2" : [
+
+      { "id" : 1, "value" : "Fournir des solutions en pierre naturelle à travers des programmes de dessin et de rendu 3D pour aider nos clients à avoir la maison de leurs rêves." },
+      { "id" : 2, "value" : "Développer nos solutions de production, de contrôle qualité et de transport depuis 18 ans en multipliant notre gamme de produits et notre nombre de clients." },
+      { "id" : 3, "value" : "Fournir les meilleurs éléments de conception pour créer l'espace de vie idéal." }
+   ]
+},
+"contact_page" : {
+
+  "jobs_1" : "Specialiste Vendeuse",
+  "jobs_2" : "Designer industriel",
+  "jobs_3" : "Spécialiste Vente et Export",
+  "form_title" : "Ecrivez Nous!",
+  "form_name" : "Nom",
+  "form_email" : "Email",
+  "form_phone" : "Téléphone",
+  "form_message" : "Message",
+  "form_button" : "Envoi"
+  },
+  "usa_navbar" : {
+    "home" : "UsaAccueil",
+    "products": "UsaProduits",
+    "about" : "UsaNous",
+    "contact" : "UsaContact",
+    "faq" : "FAQ", 
+    "search" : "Recherche"
+  },
+  "usa_product_list" : {
+
+    "header_title" : "En Stock: Livraison en 2-3 jours depuis Atlanta",
+    "footer_title" : "Rupture de stock: livraison sous 45 à 50 jours depuis la Turquie",
+    "list1_title" : "DOMAINES D'UTILISATION",
+    "list2_title" : "CATHEGORIES",
+    "list3_title" : "COULEUR",
+    "list4_title" : "TAILLES",
+    "list5_title" : "TAILLE DES MOSAİQUES"
+  },
+  "usa_product_detail" : {
+
+    "sale_price" : "Prix de Vente",
+    "in_stock" : "En Stock",
+    "size" : "Taille",
+    "sku" : "Sku",
+    "per_box" : "Par Boite",
+    "per_create" : "Per Caisse",
+    "description" : "Description",
+    "delivery_terms" : "Délai de Livraison",
+    "delivery_depo_title" : "Vous pouvez venir chercher votre commande dans notre entrepôt juste après le paiement. Pour la livraison de l'adresse, nous avons besoin de 3-5 jours ouvrables.",
+    "delivery_turkey_title" : "Ces tuiles seront produites et envoyées de Turquie, donc le délai de livraison est compris entre 45 et 50 jours à partir de notre entrepôt.",
+    "surface" : "Surface",
+    "edge" : "Bords"
+    },
+    "usa_salesTeam" : { 
+
+      "title" : "L'équipe commerciale de Mekmar",
+      "items" : [
+        {
+          "name" : "Gizem",
+           "job" : "Sales Specialist",
+           "email" : "info@mekmar.com",
+           "whatsapp" : "+90 542 660 8087",
+           "phone" : "+1 860 373 7401",
+           "image" : "https://cdn.mekmarimage.com/personel/250x250/gizem1.jpeg",
+           "webp" : "https://cdn.mekmarimage.com/personel/250x250/gizem1.webp",
+           "id"  : 1
+        },       
+        {
+          "name" : "Ozlem",
+           "job" : "Industrial Designer",
+           "email" : "export1@mekmar.com",
+           "whatsapp" : "+90 542 660 8085",
+           "phone" : "1 860 373 7401",
+           "image" : "https://cdn.mekmarimage.com/personel/250x250/ozlem2.jpeg",
+           "webp" : "https://cdn.mekmarimage.com/personel/250x250/ozlem2.webp",
+           "id" : 3
+        }
+        ,
+        {
+          "name" : "Hakan",
+           "job" : "Sales Specialist",
+           "email" : "export2@mekmar.com",
+           "whatsapp" : "+90 542 660 8084",
+           "phone" : "1 860 373 7401",
+           "image" : "https://cdn.mekmarimage.com/personel/250x250/hakan4.jpeg",
+           "webp" : "https://cdn.mekmarimage.com/personel/250x250/hakan4.webp",
+           "id" : 2,
+           "watsappLink":"https://web.whatsapp.com/send?phone=905426608084"
+        }
+       
+      ]
+      
+      
+    },
+    "usa_about_page" : {
+
+      "title" : "A propos de Nous",
+      "items" : [
+
+        { "id" : 1, "value" : "MEKMAR produit et fournit les meilleurs produits en pierre naturelle de haute qualité en Turquie." },
+        { "id" : 2, "value" : "Nous avons également un entrepôt à Stone Mountain, Atlanta." },
+        { "id" : 3, "value" : "Nous avons des stocks prêts de produits en marbre, travertin, calcaire et mosaique dans notre entrepôt d'Atlanta." },
+        { "id" : 4, "value" : "Nous envoyons 4-5 conteneurs chaque mois à notre entrepôt avec nos produits les plus vendus." },
+        { "id" : 5, "value" : "Notre systeme d'entrepôt comprend des produits de taille et de couleur standard que nous fournissons partout aux Etats-Unis.." },
+        { "id" : 6, "value" : "Nous pouvons également vous fournir des produits non standard. Pour ces commandes, nous vous demandons de préciser votre besoin et nous livrons votre commande a notre entrepôt pour que vous les recuperiez. "},
+        { "id" : 7, "value" : "Si vous preferez, nous pouvons également livrer votre commande a votre adresse. Pour cela, nous vous demanderons votre code postal et travaillerons sur les meilleurs frais de transport pour vous." },
+        { "id" : 8, "value" : "Si le produit que vous recherchez est pret dans notre stock, nous pouvons le livrer immediatement, pour la livraison a l'adresse, cela prendra 3-5 jours."},
+        { "id" : 9, "value" : "Pour les stocks prets, nous demandons a nos clients de payer le montant total avant la livraison."}
+
+      ]
+   },
+   "order" : {
+
+    "app_product_spe" : "Spécifications de produit"
+  },
+  "contact_page_team":{
+    "personel":[
+      {
+          "name" : "Fadime",
+           "job" : "Specialiste Vendeuse",
+           "email" : "export3@mekmar.com",
+           "whatsapp" : "+33 766 85 9538",
+           "image" : "https://cdn.mekmarimage.com/personel/fadime.jpeg",
+           "webp" : "https://cdn.mekmarimage.com/personel/fadime.webp",
+           "id"  : 1,
+           "watsappLink":"https://web.whatsapp.com/send?phone=003376689538",
+           "icon":"fa fa-thin fa-person-dress"
+        }
+        
+    ]
+      
+  },
+  "benzer_urun_list":{
+      "imageList": [
+            {"id":1,"webp":"https://cdn.mekmarimage.com/benzer-urunler/slabs.webp","jpeg":"https://cdn.mekmarimage.com/benzer-urunler/slabs.jpg","link_en":"/products/Slabs","link_fr":"/fr/products/Slabs","link_es":"/es/products/Slabs"},
+            {"id":2,"webp":"https://cdn.mekmarimage.com/benzer-urunler/stair-risers.webp","jpeg":"https://cdn.mekmarimage.com/benzer-urunler/stair-risers.jpg","link_en":"/products/By%20Products","link_fr":"/fr/products/By%20Products","link_es":"/es/products/By%20Products"},
+            {"id":3,"webp":"https://cdn.mekmarimage.com/benzer-urunler/sink-countertop.webp","jpeg":"https://cdn.mekmarimage.com/benzer-urunler/sink-countertop.jpg","link_en":"/products/Bath-and-Kitchen","link_fr":"/fr/products/Bath-and-Kitchen","link_es":"/es/products/Bath-and-Kitchen"},
+            {"id":4,"webp":"https://cdn.mekmarimage.com/benzer-urunler/mosaic.webp","jpeg":"https://cdn.mekmarimage.com/benzer-urunler/mosaic.jpg","link_en":"/products/Mosaics","link_fr":"/fr/products/Mosaics","link_es":"/es/products/Mosaics"},
+            {"id":5,"webp":"https://cdn.mekmarimage.com/benzer-urunler/tiles.webp","jpeg":"https://cdn.mekmarimage.com/benzer-urunler/tiles.jpg","link_en":"/products/Travertine","link_fr":"/fr/products/Travertine","link_es":"/es/products/Travertine"}
+
+        ]
+    },
+    "usa_contact_page":{
+      "adress_header":"Adresse",
+      "view_header":"Regarde Moi"
+    },
+  "videos_page":{
+    "title1":"Vidéos Informatifs",
+    "title2":"Vidéos de Production",
+    "title3":"Vidéos de Projets"
+  },
+  "fabrication_page":{
+    "header1":"Entreprises Dont Nous Travaillons",
+    "title1":"Beige Marble Epoxy Line",
+    "title2":"Bianco Ibiza Factory",
+    "title3":"Groove Process for Stairs",
+    "title4":"CNC Cutting Angled Stairs",
+    "header2":"Carrières Dont Nous Travaillons",
+    "title5":"Bianco Ibiza Marble Quarry",
+    "title6":"Turkish Calacatta Marble Quarry",
+    "title7":"Classic Travertine Quarry",
+    "title8":"Picasso Travertine Quarry",
+    "header3":"Notre Entrepôt Aux Usa",
+    "title9":"Sample Are",
+    "title10":"Available Stocks",
+    "title11":"Special Orders",
+    "title12":"Container Entered"
+  }
+}
