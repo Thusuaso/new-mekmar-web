@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu class="el-menu-demo" mode="horizontal">
             <router-link to="/usa" v-if="dis_en">
                 <el-menu-item index="1">
                     {{ usa_navbar.home}}

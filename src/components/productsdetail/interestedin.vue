@@ -40,6 +40,9 @@ export default {
     .imgClass{
         width:100%;
         height:auto;
+        filter: none;
+            transition: none;
     }
+    
 }
 </style>

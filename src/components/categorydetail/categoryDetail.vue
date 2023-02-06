@@ -142,28 +142,23 @@ export default {
     padding:0px;
     border:none;
     overflow:hidden;
-    text-align:center;
+    text-align:left;
     vertical-align:top;
     text-decoration: none;
 }
 .categoryMainRestricted{
     
-    width:calc(100% - 100px);
+    width:100%;
     height:auto;
     margin:0px;
     padding:0px;
     overflow:hidden;
-    text-align:center;
+    text-align:left;
     vertical-align: top;
     text-decoration: none;
 
 }
-@media screen and (max-width:576px) {
-    .categoryMainRestricted{
-        width:100%;
-        margin-left:25px;
-    }
-}
+
 .categoryImg{
     display: inline-block;
     float: left;
@@ -171,5 +166,88 @@ export default {
     height:200px;
     margin-right:10px;
     margin-bottom:10px;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: red;
+    }
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+/* Media Query for Tablets Ipads portrait mode */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .categoryImg {
+            display: inline-block;
+            float: left;
+            width: 180px;
+            height: 200px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+}
+
+/* Media Query for Laptops and Desktops */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    .categoryImg {
+            display: inline-block;
+            float: left;
+            width: 240px;
+            height: 200px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+}
+@media (min-width: 1281px) {
+    .categoryImg {
+            display: inline-block;
+            float: left;
+            width: 280px;
+            height: 200px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:576px) {
+    .categoryMainRestricted {
+        width: 100%;
+        margin-left: 25px;
+    }
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            filter: none;
+                transform: none;
+                transition: none;
+        }
+    
+        .container:hover {
+            position: relative;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            filter: none;
+                transform: none;
+                transition: none;
+        }
+    
 }
 </style>

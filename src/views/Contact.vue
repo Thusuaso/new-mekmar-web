@@ -1,28 +1,51 @@
 <template>
-            <div class="a-box" v-for="personel in contact_page_personel.personel" :key="personel">
-                <div class="img-container">
-                    <div class="img-inner">
-                        <div class="inner-skew">
-                            <img :src="personel.webp">
-                        </div>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <ul>
-                        <li><i :class="personel.icon" style="margin-right:12px;"></i><span>{{personel.name}}</span></li>
-                        <li><i class="fa fa-duotone fa-book-open-reader" style="margin-right:7px;"></i><span>{{ personel.job }}</span></li>
-                        <li><i class="fa-solid fa-envelope" style="margin-right:7px;"></i><span>
+            <!-- <div class="grid" >
+                <Card class="col-3" >
+                    <template #header>
+                        <img alt="user header" :src="personel.webp" style="width:200px;height:200px;text-align:center;">
+                    </template>
+                    <template #content>
+                        <ul class="container">
+                            <li class="element"><i :class="personel.icon" style="margin-right:12px;"></i><span>{{personel.name}}</span></li>
+                            <li class="element"><i :class="personel.icon" style="margin-right:12px;"></i><span>{{ personel.job }}</span></li>
+                            <li class="element"><i :class="personel.icon" style="margin-right:12px;"></i><span>
                                 <a href="mailto:info@mekmar.com" class="link">
                                     {{ personel.email }}
                                 </a>
                             </span></li>
-                        <li><i class="fa-brands fa-whatsapp" style="margin-right:7px;"></i><span><a :href="personel.watsappLink"
-                                    class="link">{{ personel.whatsapp }}</a></span></li>
-                    
-                    
+                            <li class="element"><i class="fa-brands fa-whatsapp" style="margin-right:7px;"></i><span><a :href="personel.watsappLink" class="link">{{
+                                        personel.whatsapp }}</a></span></li>
+
+                        </ul>
+                    </template>
+                </Card>
+            </div> -->
+
+
+            <div class="grid gridClass">
+                <div class="col-3 col-offset-1 gridElement" v-for="personel in contact_page_personel.personel" :key="personel">
+                    <img :src="personel.webp"/>
+                    <ul class="containerUl">
+                        <li class="elementUl"><i :class="personel.icon" style="margin-right:12px;"></i><span>{{personel.name}}</span></li>
+                        <li class="elementUl"><i :class="personel.icon" style="margin-right:12px;"></i><span>{{ personel.job }}</span></li>
+                        <li class="elementUl"><i :class="personel.icon" style="margin-right:12px;"></i><span>
+                                <a href="mailto:info@mekmar.com" class="link">
+                                    {{ personel.email }}
+                                </a>
+                            </span></li>
+                        <li class="elementUl"><i class="fa-brands fa-whatsapp" style="margin-right:7px;"></i><span><a :href="personel.watsappLink"
+                                    class="link">{{
+                                    personel.whatsapp }}</a></span></li>
+
                     </ul>
                 </div>
             </div>
+            
+
+
+
+
+
             <br />
             <br />
 
@@ -142,7 +165,34 @@ body {
             color: #04bcff;
             font-size: 18px;
         }
+
+
+    @media screen and (min-width:842px) and (max-width:927px) {
+        .elementUl{
+            font-size:14px;
+        }
+    }
+        @media screen and (min-width:758px) and (max-width:841px) {
+            .elementUl {
+                font-size: 12px;
+            }
+        }
+
+        @media screen and (min-width:577px) and (max-width:841px) {
+            .elementUl {
+                font-size: 10px;
+            }
+        }
+
     @media screen and (max-width:576px) {
+        .gridClass{
+            display:block;
+            width:100%;
+        }
+        .gridElement{
+            width:100%;
+            height:auto;
+        }
         .a-box {
             display: block;
             width: 100%;

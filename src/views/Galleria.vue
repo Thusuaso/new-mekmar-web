@@ -21,9 +21,9 @@
             </Galleria>
 
 
-        <div v-if="galleryList" class="flex" style="margin-left:55px;">
+        <!-- <div v-if="galleryList" class="">
 
-            <div v-for="(image, index) of galleryList" class="flex-initial flex align-items-center justify-content-center m-2 px-5 py-3" :key="index">
+            <div v-for="(image, index) of galleryList" class="" :key="index">
                 <div class="container" v-if="image.photosList.length > 0">
                     <img :src="image.project_image_link" :alt="image.project_name" class="image"
                         @click="imageClick(index, image.project_id)" />
@@ -32,10 +32,28 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
+
+
+
+
+
 
     </div>
-
+    <div class="grid" >
+        <div v-for="image in galleryList" :key="image" >
+            <div class="col-3" v-show="image.photosList.length > 0">
+            
+                <div class="container">
+                    <img :src="image.project_image_link" :alt="image.project_name" class="image"
+                        @click="imageClick(index, image.project_id)" />
+                    <div class="centered">{{ image.project_name }}</div>
+                </div>
+            
+            </div>
+        </div>
+        
+    </div>
 
 
 
@@ -98,6 +116,8 @@ export default {
     position: relative;
     text-align: center;
     color: white;
+    width:250px;
+    height:266px;
 }
 
 .centered {
@@ -111,9 +131,9 @@ export default {
 }
 
 .image {
+    width:auto;
+    height:266px;
     cursor: pointer;
-    width: 250px;
-    height: 250px;
     filter: drop-shadow(16px 16px 20px black) invert(25%);
     transition: all 1s 0s ease-in-out;
 }

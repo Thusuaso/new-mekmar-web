@@ -1,6 +1,5 @@
 <template>
-    <div class="categoryMain">
-        <div class="categoryRestricted">
+    <!-- <div class="categoryMain">
             <router-link :to="('/products/' + category.category_link)" v-if="dis_en">
                 <img class="categoryImage" :src="category.category_foto_en"  :alt="category.category_foto_en"/>
             </router-link>
@@ -10,8 +9,24 @@
             <router-link :to="('/es/products/' + category.category_link)" v-else-if="dis_es">
                 <img class="categoryImage"  :src="category.category_foto_es"  :alt="category.category_foto_es"/>
             </router-link>
-        </div>
-    </div>
+    </div> -->
+
+            <router-link :to="('/products/' + category.category_link)" v-if="dis_en">
+                <img class="categoryImage" :src="category.category_foto_en" :alt="category.category_foto_en" />
+            </router-link>
+            <router-link :to="('/fr/products/' + category.category_link)" v-else-if="dis_fr">
+                <img class="categoryImage" :src="category.category_foto_fr" :alt="category.category_foto_fr" />
+            </router-link>
+            <router-link :to="('/es/products/' + category.category_link)" v-else-if="dis_es">
+                <img class="categoryImage" :src="category.category_foto_es" :alt="category.category_foto_es" />
+            </router-link>
+
+
+
+
+
+
+
 </template>
 
 <script>
@@ -33,26 +48,40 @@ export default {
 </script>
 
 <style scoped>
-.categoryMain{
-    width:230px;
-    height:230px;
-    margin:0 auto;
-    padding:auto;
-    vertical-align: top;
-    text-decoration: none;
-    
-}
-
 .categoryImage{
-    width:230px;
-    text-align:center;
+    width:280px;
+    height:auto;
     cursor:pointer;
     filter: drop-shadow(16px 16px 20px black) invert(20%);
     transform:scale(1);
         transition: all 1s 0s ease-in-out;
+        margin-left:35px;
 }
 .categoryImage:hover {
+    width: 280px;
+    height: auto;
     filter: none;
-    transform: scale(1.1);
+    transform: scale(0.9);
+}
+
+
+@media screen and (max-width:576px) {
+    .categoryImage {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+            filter: drop-shadow(16px 16px 20px black) invert(20%);
+            transform: scale(1);
+            transition: all 1s 0s ease-in-out;
+            margin-left: -10px;
+        }
+    
+        .categoryImage:hover {
+            width: 300px;
+            height: auto;
+            filter: none;
+            transform: scale(0.9);
+            margin-left: -10px;
+        }
 }
 </style>

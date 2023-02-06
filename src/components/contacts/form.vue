@@ -107,6 +107,7 @@ export default {
 </script>
 <style scoped>
 .formMain{
+    display:grid;
     width:100%;
     height:auto;
     margin: 0px;
@@ -118,14 +119,33 @@ export default {
 
 }
 .formRestricted{
+    grid-column: 3;
     width:calc(100% - 100px);
     text-align:center;
-}
-.formRestricted {
-    width: calc(100% - 100px);
-    margin-left:50px;
 }
 .inputText{
     width:100%;
 }
+
+
+        @media screen and (max-width:576px) {
+            .formMain {
+                    display: grid;
+                    width: 100%;
+                    height: auto;
+                    margin: 0px;
+                    padding: 0px;
+                    border: none;
+                    text-align: left;
+                    vertical-align: top;
+                    text-decoration: none;
+            
+                }
+            
+                .formRestricted {
+                    grid-column: 3;
+                    width:100%;
+                    text-align: center;
+                }
+        }
 </style>

@@ -11,6 +11,7 @@
     
         </router-view>
         <hr />
+        <br />
         <footerPage></footerPage>
       </div>
     </div>

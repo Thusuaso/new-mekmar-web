@@ -61,6 +61,22 @@ const routes = [
       path : '/Gallery',
       name : 'galeria',
       component : Galleria,
+  },
+    {
+      path : '/Search',
+      name : 'search',
+      component: () => import("@/views/Categories")
+      /*beforeEnter : (to,from,next) => {
+        store.dispatch('urunYuklemeBasla');
+        store.dispatch('depoModulPasifEt')
+        let aramaText = localStorage.getItem('searchtext')
+        urunService.getUrunAramaList(aramaText).then(data => {
+
+          store.dispatch('urunAramaYukle',data);
+          next();
+        })
+      },*/
+
     },
   /*fr*/
     {
@@ -166,7 +182,8 @@ const routes = [
       path : '/es/Gallery',
       name : 'galeriaes',
       component : Galleria,
-    },
+  },
+    
     
 
 
@@ -626,6 +643,12 @@ router.beforeEach((to, from, next) => {
     localStorage.removeItem('mekmar-dil')
     localStorage.setItem('mekmar-dil', 'en')
   }
+
+    serviceUsa.getProductCategoryList().then(data => {
+          store.dispatch('usa_product_list_act',data)
+        })
+
+
     store.dispatch('loadMainData');
     store.dispatch('platformKontrol')
     next();

@@ -44,6 +44,9 @@ const service = {
     
     getGalleriaPhotos() {
         return axios.get('/mekmar/galleria/getPhotos').then(res=>res.data)
+    },
+    getAllProducts() {
+        return axios.get('/home/categoryDetailAll').then(res=>res.data)
     }
 
 

@@ -57,6 +57,7 @@ export default {
 .card {
     position: relative;
     display: block;
+    width:350px;
     height: 100%;
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
@@ -65,7 +66,7 @@ export default {
 
 .card__image {
     width: 100%;
-    height: 250px;
+    height: 260px;
 }
 
 .card__overlay {

@@ -31,6 +31,8 @@ import ProgressBar from 'primevue/progressbar';
 import ScrollTop from 'primevue/scrolltop';
 import mitt from 'mitt';
 import Breadcrumb from 'primevue/breadcrumb';
+import Card from 'primevue/card';
+
 const app = createApp(App)
 const emitter = mitt();
 app.config.globalProperties.emitter = emitter;
@@ -53,7 +55,9 @@ app.component('TabView', TabView)
 app.component('TabPanel', TabPanel)
 app.component('ProgressBar', ProgressBar)
 app.component('ScrollTop', ScrollTop)
-app.component('Breadcrumb',Breadcrumb)
+app.component('Breadcrumb', Breadcrumb)
+app.component('Card',Card)
+
 
 
 

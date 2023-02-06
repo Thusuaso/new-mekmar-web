@@ -3,31 +3,58 @@
         <h1 class="header">
             {{ product_detail.onerilenurun_title }}
         </h1>
-        <div class="categoryMain">
+        <!-- <div class="categoryMain">
             <div class="categoryMainRestricted">
                 <div class="categoryImg" v-for="item in categoryProductDetailSuggested" :key="item">
                     <a :href="'/products/detail/' + item.product_category_name + '/' + item.product_name_en" v-if="dis_en">
                         <div class="container">
-                            <Image :src="item.product_webp" alt="Image Text" imageStyle="width:330px;height:200px;cursor:pointer;" />
+                            <Image class="containerSub" :src="item.product_webp" alt="Image Text" imageStyle="width:330px;height:200px;cursor:pointer;" />
                             <div class="bottom-left">{{ item.product_name_en }}</div>
                         </div>
                     </a>
                     <a :href="'/products/detail/' + item.product_category_name + '/' + item.product_name_en" v-else-if="dis_fr">
                         <div class="container">
-                            <Image :src="item.product_webp" alt="Image Text" imageStyle="width:330px;height:200px;cursor:pointer;" />
+                            <Image class="containerSub" :src="item.product_webp" alt="Image Text" imageStyle="width:330px;height:200px;cursor:pointer;" />
                             <div class="bottom-left">{{ item.product_name_fr }}</div>
                         </div>
                     </a>
                     <a :href="'/products/detail/' + item.product_category_name + '/' + item.product_name_en" v-else-if="dis_es">
                         <div class="container">
-                            <Image :src="item.product_webp" alt="Image Text" imageStyle="width:330px;height:200px;cursor:pointer;" />
+                            <Image class="containerSub" :src="item.product_webp" alt="Image Text" imageStyle="width:330px;height:200px;cursor:pointer;" />
                             <div class="bottom-left">{{ item.product_name_es }}</div>
                         </div>
                     </a>
                 </div>
             </div>
+        </div> -->
+        
+
+        <div class="grid">
+                    <div class="col-3 gridColumn" v-for="item in categoryProductDetailSuggested" :key="item">
+                        <a :href="'/products/detail/' + item.product_category_name + '/' + item.product_name_en" v-if="dis_en">
+                            <div class="container">
+                                <Image class="containerSub" :src="item.product_webp" alt="Image Text"
+                                    imageStyle="width:330px;height:200px;cursor:pointer;" />
+                                <div class="bottom-left">{{ item.product_name_en }}</div>
+                            </div>
+                        </a>
+                        <a :href="'/products/detail/' + item.product_category_name + '/' + item.product_name_en" v-else-if="dis_fr">
+                            <div class="container">
+                                <Image class="containerSub" :src="item.product_webp" alt="Image Text"
+                                    imageStyle="width:330px;height:200px;cursor:pointer;" />
+                                <div class="bottom-left">{{ item.product_name_fr }}</div>
+                            </div>
+                        </a>
+                        <a :href="'/products/detail/' + item.product_category_name + '/' + item.product_name_en" v-else-if="dis_es">
+                            <div class="container">
+                                <Image class="containerSub" :src="item.product_webp" alt="Image Text"
+                                    imageStyle="width:330px;height:200px;cursor:pointer;" />
+                                <div class="bottom-left">{{ item.product_name_es }}</div>
+                            </div>
+                        </a>
+                    </div>
         </div>
-    
+
     
     </div>
 </template>
@@ -49,6 +76,7 @@ export default {
 
 <style scoped>
 .container {
+    display:grid;
     position: relative;
     text-align: center;
     color: white;
@@ -75,51 +103,47 @@ export default {
 
 }
 
-.categoryMain {
-    width: 100%;
-    height: auto;
-    margin: 0px auto;
-    padding: 0px;
-    border: none;
-    overflow: hidden;
-    text-align: center;
-    vertical-align: top;
-    text-decoration: none;
-}
+.containerSub {
 
-.categoryMainRestricted {
-
-    width: calc(100% - 100px);
-    height: auto;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    text-align: center;
-    vertical-align: top;
-    text-decoration: none;
-    margin-left:53px;
+    grid-column: 3;
 
 }
 
-.categoryImg {
-    display: inline-block;
-    float: left;
-    width: 280px;
-    height: 200px;
-    margin-left: 25px;
-    margin-bottom: 10px;
-}
+
 @media screen and (max-width:576px) {
-    .categoryMainRestricted{
+    .grid{
         display:block;
         width:100%;
-        margin:0px;
+
     }
-    .categoryImg{
+    .gridColumn{
         width:100%;
-        height:200px;
-        margin:0px;
-        margin-bottom:5px;
+        height:auto;
+        margin-left:8px;
     }
+
+
+        .container {
+            display: grid;
+            position: relative;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            filter: none;
+            transform: none;
+            transition: none;
+        }
+    
+        .container:hover {
+            position: relative;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 3px black;
+            transform: none;
+            filter: none;
+        }
+
+
+
 }
 </style>

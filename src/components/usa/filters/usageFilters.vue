@@ -55,13 +55,12 @@ export default {
 
 
 <style scoped>
-
 .link{
     color:black;
     background-color: white;
 }
 .table{
-    width:270px;
+    width:230px;
     height:auto;
     margin:0px;
     padding:0px;
@@ -99,5 +98,12 @@ li{
 }
 li:hover{
     background-color:#ccc;
+}
+
+@media screen and (max-width:576px) {
+    .table{
+        text-align:center;
+        margin-left:55px;
+    }
 }
 </style>

@@ -4,8 +4,11 @@
         <div class="column is-3">
             <slide></slide>
         </div>
-        <div class="column is-9" style="margin-left:60px;">
-            <categoryProduct class="categoryProduct" v-for="item in categoryList" :key="item" :category="item"></categoryProduct>
+        <div class="column is-9">
+            <div class="gridContainer">
+                    <categoryProduct class="gridElement"  v-for="item in categoryList" :key="item" :category="item"></categoryProduct>
+
+            </div>
         </div>
     </div>
 </template>
@@ -44,19 +47,50 @@ export default {
 }
 </script>
 <style scoped>
-
-.categoryProduct{
-    display:inline-block;
-    float:left;
-    margin-top:25px;
-    margin-right:85px;
-    margin-bottom:35px;
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
 }
-.categoryProduct:hover{
-    display: inline-block;
-    float: left;
-    margin-top: 25px;
-    margin-right: 85px;
-    margin-bottom: 35px;
+
+.gridElement {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+@media screen and (min-width:1201px) {
+    .gridElement {
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+
+}
+@media  screen and (min-width:577px) and (max-width:1200px) {
+    .gridElement {
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
+}
+
+
+@media screen and (max-width:576px) {
+    .gridContainer {
+            display: block;
+            width:100%;
+            height:auto;
+            padding: 10px;
+        }
+    
+        .gridElement {
+            width: 390px;
+            height: 300px;
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+        }
 }
 </style>

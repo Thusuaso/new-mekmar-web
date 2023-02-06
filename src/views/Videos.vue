@@ -1,37 +1,85 @@
 <template>
-    <div>
-        <h1 class="header">{{ videos_page.title1 }}</h1>
-        <Carousel :value="videosListCategory1" :numVisible="3" :numScroll="1">
+        <!-- <h1 class="header">{{ videos_page.title1 }}</h1>
+        <Carousel :value="videosListCategory1" :numVisible="4" :numScroll="1" :responsiveOptions="responsiveOptions" orientation="horizontal" :circular="true">
             <template #item="slotProps">
-                <iframe width="420" height="315" :src="slotProps.data.videoUrl"></iframe>
+                <iframe :src="slotProps.data.videoUrl"></iframe>
             </template>
         </Carousel>
         
         <br/>
         <h1 class="header">{{ videos_page.title2 }}</h1>
 
-        <Carousel :value="videosListCategory2" :numVisible="3" :numScroll="1">
+        <Carousel :value="videosListCategory2" :numVisible="4" :numScroll="1" :responsiveOptions="responsiveOptions" orientation="horizontal" :circular="true">
             <template #item="slotProps">
-                <iframe width="420" height="315" :src="slotProps.data.videoUrl"></iframe>
+                <iframe  :src="slotProps.data.videoUrl"></iframe>
             </template>
         </Carousel>
         <br />
         <h1 class="header" v-if="!dis_fr">{{ videos_page.title3 }}</h1>
 
-        <Carousel :value="videosListCategory3" :numVisible="3" :numScroll="1" v-if="!dis_fr">
+        <Carousel :value="videosListCategory3" :numVisible="4" :numScroll="1" v-if="!dis_fr" :responsiveOptions="responsiveOptions" orientation="horizontal" :circular="true">
             <template #item="slotProps">
-                <iframe width="420" height="315" :src="slotProps.data.videoUrl"></iframe>
+                <iframe  :src="slotProps.data.videoUrl"></iframe>
             </template>
         </Carousel>
         <br/>
         <h1 class="header" v-if="dis_fr">{{ videos_page.title3 }}</h1>
 
-        <Carousel :value="videosListFranceCategory" :numVisible="3" :numScroll="1" v-if="dis_fr">
+        <Carousel :value="videosListFranceCategory" :numVisible="4" :numScroll="1" v-if="dis_fr" :responsiveOptions="responsiveOptions" orientation="horizontal" :circular="true">
             <template #item="slotProps">
-                <iframe width="420" height="315" :src="slotProps.data.videoUrl"></iframe>
+                <iframe  :src="slotProps.data.videoUrl"></iframe>
+            </template>
+        </Carousel> -->
+
+        <Carousel :value="videosListCategory1" :numVisible="1" :numScroll="1" orientation="vertical" verticalViewPortHeight="330px"
+            :responsiveOptions="responsiveOptions" style="text-align:center;" circular autoplayInterval="3000">
+            <template #header>
+                {{ videos_page.title1 }}
+            </template>
+            <template #item="slotProps">
+                <iframe style="width:450px;height:330px;text-align:center;" :src="slotProps.data.videoUrl"></iframe>
+
             </template>
         </Carousel>
-    </div>
+
+        <Carousel :value="videosListCategory2" :numVisible="1" :numScroll="1" orientation="vertical"
+            verticalViewPortHeight="330px" :responsiveOptions="responsiveOptions" style="text-align:center;" circular
+            autoplayInterval="3000">
+            <template #header>
+                {{ videos_page.title2 }}
+            </template>
+            <template #item="slotProps">
+                <iframe style="width:450px;height:330px;text-align:center;" :src="slotProps.data.videoUrl"></iframe>
+        
+            </template>
+        </Carousel>
+
+        <Carousel v-if="!dis_fr" :value="videosListCategory3" :numVisible="1" :numScroll="1" orientation="vertical"
+            verticalViewPortHeight="330px" :responsiveOptions="responsiveOptions" style="text-align:center;" circular
+            autoplayInterval="3000">
+            <template #header>
+                {{ videos_page.title3 }}
+            </template>
+            <template #item="slotProps">
+                <iframe style="width:450px;height:330px;text-align:center;" :src="slotProps.data.videoUrl"></iframe>
+        
+            </template>
+        </Carousel>
+        <Carousel v-if="dis_fr" :value="videosListFranceCategory" :numVisible="1" :numScroll="1" orientation="vertical"
+            verticalViewPortHeight="330px" :responsiveOptions="responsiveOptions" style="text-align:center;" circular
+            autoplayInterval="3000">
+            <template #header>
+                {{ videos_page.title3 }}
+            </template>
+            <template #item="slotProps">
+                <iframe style="width:450px;height:330px;text-align:center;" :src="slotProps.data.videoUrl"></iframe>
+        
+            </template>
+        </Carousel>
+
+
+
+
 </template>
 
 <script>
@@ -48,6 +96,27 @@ export default {
 
             next()
         })
+    },
+    data() {
+        return {
+            responsiveOptions: [
+                {
+                    breakpoint: '1024px',
+                    numVisible: 3,
+                    numScroll: 3
+                },
+                {
+                    breakpoint: '600px',
+                    numVisible: 2,
+                    numScroll: 2
+                },
+                {
+                    breakpoint: '480px',
+                    numVisible: 1,
+                    numScroll: 1
+                }
+            ]
+      }  
     },
     computed: {
         ...mapGetters([

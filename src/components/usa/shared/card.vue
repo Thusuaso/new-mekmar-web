@@ -68,7 +68,6 @@ export default {
 </script>
 
 <style scoped>
-
 p{
     font-size:15px;
     text-indent: 25px;
@@ -133,5 +132,24 @@ p{
     display: inline-block;
     width: 60%;
     padding-left: 0px;
+}
+
+@media screen and (max-width:576px){
+    .appLi {
+
+            width: 100%;
+
+        }
+    
+        .appSpan1 {
+
+            width: 100%;
+
+    
+        }
+    
+        .appSpan2 {
+            width: 100%;
+        }
 }
 </style>

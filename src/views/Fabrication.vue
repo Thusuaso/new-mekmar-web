@@ -212,7 +212,7 @@
     
 </template>
 <script>
-import store from '@/store'
+// import store from '@/store'
 import service from "@/service/home"
 import { mapGetters } from "vuex";
 export default {
@@ -226,16 +226,16 @@ export default {
             'fabrication_page'
       ])  
     },
-    beforeRouteEnter(to, from, next) {
-        store.dispatch('fullScreenLoadingAct', true)
+    // beforeRouteEnter(to, from, next) {
+    //     store.dispatch('fullScreenLoadingAct', true)
 
-        service.getFabricationList().then(data => {
-            store.dispatch("fabrication_load_act", data)
-            store.dispatch('fullScreenLoadingAct', false)
+    //     service.getFabricationList().then(data => {
+    //         store.dispatch("fabrication_load_act", data)
+    //         store.dispatch('fullScreenLoadingAct', false)
 
-        })
-        next()
-    },
+    //     })
+    //     next()
+    // },
 
     data() {
         return {
@@ -267,10 +267,18 @@ export default {
             this.image_form = true
         }
     },
-    mounted() {
-        this.categoryOne = this.fabricationList.filter(x => x.line == 1)
-        this.categoryTwo = this.fabricationList.filter(x => x.line == 2)
-        this.categoryThree = this.fabricationList.filter(x => x.line == 3)
+    created() {
+        this.$store.dispatch('fullScreenLoadingAct', true)
+
+        service.getFabricationList().then(data => {
+            this.categoryOne = data.filter(x => x.line == 1)
+            this.categoryTwo = data.filter(x => x.line == 2)
+            this.categoryThree = data.filter(x => x.line == 3)
+            this.$store.dispatch('fullScreenLoadingAct', false)
+
+        })
+        
+        
 
 
     }

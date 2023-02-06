@@ -7,7 +7,7 @@
             <img class="imageMekmar" src="https://cdn.mekmarimage.com/logo/logo-mekmar.png" alt="Mekmar Logo" />
         </div>
         <div class="column is-9">
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" v-if="dis_en">
+            <el-menu  class="el-menu-demo" mode="horizontal" v-if="dis_en">
     
                 <router-link :to="'/'">
                     <el-menu-item index="1">{{ navData.home }}</el-menu-item>
@@ -53,6 +53,10 @@
                         </a>
                     
                     </el-menu-item>
+                    <!-- <el-menu-item index="9" style="margin-top:20px">
+                        <search></search>
+                    
+                    </el-menu-item> -->
                 <router-link :to="'/'">
                     <el-menu-item index="1">
                         <img src="https://cdn.mekmarimage.com/logo/eng-logo.png" />
@@ -69,7 +73,7 @@
                     </el-menu-item>
                 </router-link>
             </el-menu>
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" v-else-if="dis_fr">
+            <el-menu  class="el-menu-demo" mode="horizontal" v-else-if="dis_fr">
             
                 <router-link :to="'/fr'">
                     <el-menu-item index="1">{{ navData.home }}</el-menu-item>
@@ -130,7 +134,7 @@
                     </el-menu-item>
                 </router-link>
             </el-menu>
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" v-else-if="dis_es">
+            <el-menu  class="el-menu-demo" mode="horizontal" v-else-if="dis_es">
             
                 <router-link :to="'/es'">
                     <el-menu-item index="1">{{ navData.home }}</el-menu-item>
@@ -195,7 +199,11 @@
 import service from "@/service/home";
 // import store from "@/store";
 import { mapGetters } from "vuex";
+// import search from "@/components/shared/searchbox.vue"
 export default {
+    components: {
+        // search  
+    },
     created() {
         service.getProductList().then(data => {
             this.$store.dispatch('products_load_act', data)
